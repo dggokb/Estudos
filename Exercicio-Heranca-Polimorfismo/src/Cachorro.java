@@ -13,7 +13,8 @@ public class Cachorro extends Animal{
         this.raca = raca;
     }
 
-    public void saidaCachorro (){
-        System.out.println("O nome do animal: "+ getNome() + " Peso: " + getPeso() + " Habitat: "+ getRaca());
+    @Override
+    public String toString (){
+        return "O nome do animal: "+ getNome() + " Peso: " + getPeso() + " Habitat: "+ getRaca();
     }
 }

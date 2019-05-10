@@ -9,14 +9,20 @@ public class Operario extends Empregado {
         this.comissao = comissao;
     }
 
-    public double calculaComissao(){
-        return getComissao()*getValorProducao();
+    public double calculaComissao() {
+        return getComissao() * getValorProducao();
     }
 
     @Override
     public double calculaSalario() {
-        double diferenca = getSalarioBase()-(getSalarioBase() * getImposto());
+        double diferenca = getSalarioBase() - (getSalarioBase() * getImposto());
         return diferenca + calculaComissao();
+    }
+
+    @Override
+    public String toString() {
+        return "O Operario: " + getNome() + " tem o salário base: " +
+                getSalarioBase() + " seu salário final é de: " + calculaSalario();
     }
 
 

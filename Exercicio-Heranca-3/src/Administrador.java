@@ -9,8 +9,14 @@ public class Administrador extends Empregado {
 
     @Override
     public double calculaSalario() {
-        double diferenca = getSalarioBase()-(getSalarioBase() * getImposto());
+        double diferenca = getSalarioBase() - (getSalarioBase() * getImposto());
         return diferenca + getAjudaDeCusto();
+    }
+
+    @Override
+    public String toString() {
+        return "O Empregado: " + getNome() + " tem o salário base: " + getSalarioBase() +
+                " retirando o imposto de 10% e adicionado a ajuda de custo, seu salário é de: " + calculaSalario();
     }
 
     public double getAjudaDeCusto() {

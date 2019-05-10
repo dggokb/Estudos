@@ -13,6 +13,12 @@ public class Fornecedor extends Pessoa {
         return getValorCredito() - getValorDivida();
     }
 
+    @Override
+    public String toString(){
+        return "Valor da divida do: " + getNome() + " é de: " +
+                getValorDivida() + " seu crédito final é de: " + obterSaldo();
+    }
+
     public double getValorCredito() {
         return valorCredito;
     }

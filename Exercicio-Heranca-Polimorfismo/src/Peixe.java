@@ -15,7 +15,8 @@ public class Peixe extends Animal {
         this.tipoHabitat = tipoHabitat;
     }
 
-    public void saidaPeixe (){
-        System.out.println("O nome do animal: "+ getNome() + " Peso: " + getPeso() + " Habitat: "+ getTipoHabitat());
+    @Override
+    public String toString (){
+        return "O nome do animal: "+ getNome() + " Peso: " + getPeso() + " Habitat: "+ getTipoHabitat();
     }
 }

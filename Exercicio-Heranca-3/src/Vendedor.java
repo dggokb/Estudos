@@ -17,8 +17,13 @@ public class Vendedor extends Empregado {
     @Override
     public double calculaSalario() {
         double diferenca = getSalarioBase() - (getSalarioBase() * getImposto());
-        System.out.println(diferenca);
         return diferenca + calculaComissao();
+    }
+
+    @Override
+    public String toString() {
+        return "O Vendedor: " + getNome() + " tem o salário base: " +
+                getSalarioBase() + " seu salário final é de: " + calculaSalario();
     }
 
 
